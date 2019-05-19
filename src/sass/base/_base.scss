@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px, 10/16 = .625 * 100 = 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  padding: 4.5rem 3.5rem;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-red-light 20%,
+    $color-red 60%,
+    $color-red-dark
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: $color-light;
+  border-radius: 0.2rem;
+}
+
+.spinner {
+  width: fit-content;
+  margin: auto;
+  padding: 2rem;
+
+  img {
+    height: 7rem;
+    animation: rotating 1s linear infinite;
+  }
+}

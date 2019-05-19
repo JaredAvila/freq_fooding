@@ -1,0 +1,178 @@
+.recipe {
+  padding: 0 2rem;
+
+  &__top {
+    display: flex;
+
+    &--info {
+      width: 100%;
+
+      &-title {
+        font-size: 2.7rem;
+        font-weight: 300;
+        background-color: $color-red-dark;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        letter-spacing: 0.4rem;
+      }
+      &-author {
+        font-size: 2.5rem;
+        text-align: center;
+        background-color: white;
+        margin-bottom: 1rem;
+      }
+
+      &-servingsLikes {
+        display: flex;
+        justify-content: space-between;
+
+        .like-btn {
+          i {
+            font-size: 1.8rem;
+            color: $color-dark;
+            padding: 1.2rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &-servings {
+        font-size: 2rem;
+        color: $color-red;
+        margin-left: 2rem;
+
+        i {
+          margin-right: 1rem;
+        }
+      }
+      &-calPer {
+        font-size: 2rem;
+        color: $color-red;
+        margin-left: 2rem;
+
+        i {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+
+    .nutrition {
+      width: 30rem;
+      margin: 2rem 0rem;
+      margin-right: 2rem;
+      padding: 0.5rem;
+      height: fit-content;
+      font-size: 1.3rem;
+      border: 0.25rem solid $color-dark;
+      background-color: white;
+
+      &__title {
+        font-size: 2.5rem;
+        line-height: 0.5;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+        color: #272727;
+        background-color: white;
+      }
+
+      &__flex {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-dark;
+      }
+    }
+
+    &__left {
+      flex: 1;
+    }
+
+    &--ingList {
+      padding: 2rem 0;
+      list-style: none;
+      background-color: white;
+      height: fit-content;
+      margin: 2rem 0;
+      font-size: 1.8rem;
+
+      &-title {
+        font-size: 3rem;
+        font-weight: 300;
+        border-bottom: 2px solid black;
+        color: orangered;
+        text-align: center;
+      }
+
+      &-link {
+        background-color: orangered;
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 2px;
+        width: fit-content;
+        align-self: center;
+        transition: $trans-default;
+
+        &:hover {
+          transform: translateY(-0.7rem);
+          box-shadow: 0 0.3rem 0.8rem rgba($color-dark, 0.8);
+        }
+
+        &:active {
+          transform: translateY(-0.2rem);
+          box-shadow: 0 0.1rem 0.6rem rgba($color-dark, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.ingList__item {
+  margin-left: 2rem;
+  padding: 1rem 1rem 1rem 0;
+  cursor: default;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.black_spacer_large {
+  height: 1rem;
+  background-color: #272727;
+  width: 100%;
+}
+
+.black_spacer_normal {
+  height: 0.5rem;
+  background-color: #272727;
+  width: 100%;
+}
+
+.recipe__bottom__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.addToList {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.add {
+  color: green;
+}
+.remove {
+  color: $color-red;
+}
+
+.recipesLIkes {
+  display: flex;
+
+  .fas,
+  .far {
+    justify-self: flex-end;
+  }
+}

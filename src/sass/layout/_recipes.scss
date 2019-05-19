@@ -1,0 +1,87 @@
+.recipes {
+  background-color: white;
+  width: 25%;
+  height: fit-content;
+
+  &__list {
+    list-style: none;
+
+    &--item {
+      display: flex;
+      background-color: white;
+      padding: 15px;
+      margin: 5px;
+      cursor: pointer;
+      transition: $trans-default;
+
+      &:hover {
+        box-shadow: 0 0.2rem 0.6rem rgba(grey, 0.8);
+        transform: translateY(-0.5rem) scale(1.07);
+        z-index: 10;
+      }
+      &:focus {
+        box-shadow: none;
+        transform: translateY(0) scale(1);
+      }
+
+      &--label {
+        color: $color-red-dark;
+        font-size: 2rem;
+      }
+
+      &--pub {
+        font-size: 1.3rem;
+      }
+
+      &--img {
+        height: 10rem;
+        border-radius: 50%;
+        box-shadow: 0 0.2rem 0.5rem grey;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+
+    &--btn {
+      margin: 1rem 3rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $color-red-dark;
+      font-size: 1.8rem;
+      border-radius: 2px;
+      padding: 0.5rem 1rem;
+      transition: $trans-long;
+
+      &:hover {
+        background-color: $color-light;
+      }
+    }
+  }
+}
+
+.next {
+  margin-left: auto;
+}
+
+.active {
+  background-color: $color-red-light;
+  cursor: default;
+  &:hover {
+    box-shadow: none !important;
+    transform: translateY(0) scale(1) !important;
+    z-index: 10;
+  }
+}
+
+.noResults {
+  font-size: 1.8rem;
+  color: $color-red-dark;
+  font-weight: 700;
+  text-align: center;
+  padding: 2rem;
+}
