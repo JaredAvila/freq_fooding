@@ -16,11 +16,13 @@ import Likes from "./models/Likes";
 
 // Global State
 const state = {};
-state.list = new List();
-state.likes = new Likes();
 
-//TESTING
-window.state = state;
+// on load
+window.addEventListener("load", () => {
+  state.list = new List();
+  state.likes = new Likes();
+  state.likes.readStorage();
+});
 
 // Search Controller
 
@@ -62,6 +64,7 @@ el.paginationBtns.addEventListener("click", e => {
 
 // Recipe Controller
 
+// display when no recipe is selected.
 recipeView.noRecipe();
 
 el.recipeList.addEventListener("click", e => {
@@ -79,7 +82,7 @@ el.recipeList.addEventListener("click", e => {
     window.scrollTo(0, 0);
   }
 });
-
+// check if item is on shopping list
 const checkTheList = listItem => {
   let type = true;
   let id;
@@ -189,17 +192,21 @@ el.likeListBtn.addEventListener("click", e => {
   }
 });
 
+// Likes list display recipe
 el.likesListContainer.addEventListener("click", e => {
+  // get clicked recipe and find in favorites list
   const recipe = e.target.closest("li");
   state.likes.likes.forEach(like => {
     like.recipe.id === recipe.dataset.id
       ? (state.curRecipe = like.recipe)
       : state.curRecipe;
   });
+  // reder recipe and update UI
   recipeView.renderRecipe(state.curRecipe, state.list.list, state.likes);
-  searchView.addActiveLikes(state.curRecipe, state.search.recipes);
+  if (state.search)
+    searchView.addActiveLikes(state.curRecipe, state.search.recipes);
 });
-
+// makes it so that if user clicks anywhere outside of fav list it closes list
 window.addEventListener("click", e => {
   let check = true;
   e.target.classList.forEach(className => {

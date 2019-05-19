@@ -91,6 +91,10 @@
       color: $color-red-light;
     }
 
+    &:hover .likesList {
+      display: block;
+    }
+
     &:active i {
       color: $color-red-dark;
     }
