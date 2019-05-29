@@ -27,6 +27,10 @@
       &--label {
         color: $color-red-dark;
         font-size: 2rem;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
       }
 
       &--pub {
@@ -38,6 +42,10 @@
         border-radius: 50%;
         box-shadow: 0 0.2rem 0.5rem grey;
         margin-right: 10px;
+
+        @include respond(tab-port) {
+          height: 6rem;
+        }
       }
     }
   }
