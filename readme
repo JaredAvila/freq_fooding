@@ -1,0 +1,11 @@
+How to use:
+
+1.) in console run: npm install
+
+2.) then:
+
+    a) for live dev server w/ auto re-load: npm run start
+
+    b) for development w/o live server: npm run dev
+
+    c) for production build: npm run build
