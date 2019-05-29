@@ -1,5 +1,9 @@
 .display-recipe {
   width: 50%;
+
+  @include respond(phone) {
+    width: 100%;
+  }
 }
 
 .noRecipes {

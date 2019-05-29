@@ -1,3 +1,7 @@
 .section-bottom {
   display: flex;
+  @include respond(phone) {
+    flex-flow: column-reverse;
+    align-items: center;
+  }
 }

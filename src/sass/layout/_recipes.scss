@@ -3,6 +3,10 @@
   width: 25%;
   height: fit-content;
 
+  @include respond(phone) {
+    width: 100%;
+  }
+
   &__list {
     list-style: none;
 
