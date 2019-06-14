@@ -2,9 +2,9 @@
 
 ## How to use:
 
-1.) in console run: npm install
+1.) Install dependencies: npm install
 
-2.) then:
+2.) Available Scripts:
 
     a) for live dev server w/ auto re-load: npm run start
 
